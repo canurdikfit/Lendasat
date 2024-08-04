@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Guava Candy";
+  src: url("assets/fonts/GuavaCandy.ttf");
+}
+
+body {
+  margin: 0;
+  font-synthesis: none;
+  font-optical-sizing: auto;
+  font-family: "Guava Candy";
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  background: #000;
+  color: #fff;
+}
+
+.main {
+  visibility: hidden;
+}
+
+.gradient_overlay {
+  background: rgb(0, 0, 0);
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.08) 0%,
+    rgba(0, 0, 0, 1) 90%
+  );
+}
+
+p {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  @apply text-sm md:text-base lg:text-lg;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Guava Candy";
+  background: #bfbfbf;
+  color: transparent;
+  text-shadow: 0.3px 3px 0 rgb(255, 255, 255);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+}
+
+@media screen and (max-width: 660px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    text-shadow: 0.1px 2.2px 0 rgb(255, 255, 255);
+  }
+}
+
+h1 {
+  @apply text-center text-3xl md:text-5xl xl:text-7xl;
+}
+
+h2 {
+  @apply text-center text-3xl md:text-5xl xl:text-7xl;
+}
+
+h3 {
+  @apply text-center text-2xl md:text-4xl xl:text-6xl;
+}
+
+.btnHov:hover {
+  transform: scale(1.08) rotate(6deg) !important;
+  transition: all 0.25s cubic-bezier(0.67, 2.94, 0.31, 0.5) !important;
+}
+
+.swiper-slide,
+.mySwiper {
+  @apply lg:w-[300px] w-[200px]  !important;
+}
+
+.swiper-3d .swiper-slide-shadow {
+  background: none !important;
+}
+
+input,
+textarea {
+  font-family: "Guava Candy";
+}
