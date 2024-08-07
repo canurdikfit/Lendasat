@@ -1,8 +1,10 @@
-import TwitterBtn from "./../assets/imgs/buttons/twitter.svg";
-import YoutubeBtn from "./../assets/imgs/buttons/youtube.svg";
-import LinkedInBtn from "./../assets/imgs/buttons/linkedin.svg";
-import InstagramBtn from "./../assets/imgs/buttons/instagram.svg";
+import TwitterBtn from "./../assets/imgs/buttons/twitter.png";
+import YoutubeBtn from "./../assets/imgs/buttons/youtube.png";
+import LinkedInBtn from "./../assets/imgs/buttons/linkedin.png";
+import InstagramBtn from "./../assets/imgs/buttons/instagram.png";
 import CulangexLogo from "./../assets/imgs/culangex.png";
+import AnimatedCursor from "react-animated-cursor"
+
 
 export default function Footer() {
   return (
@@ -50,6 +52,39 @@ export default function Footer() {
             All Rights Reserved {new Date().getFullYear()} | culangex
           </h6>
         </div>
+      </div>
+
+
+
+
+
+
+      <div className="hidden lg:block">
+
+        <AnimatedCursor
+          innerSize={8}
+          outerSize={35}
+          color='182, 246, 255'
+          outerAlpha={0.2}
+          innerScale={0.7}
+          outerStyle={{
+            mixBlendMode: 'exclusion'
+          }}
+          outerScale={1.7}
+          clickables={[
+            'a',
+            'input[type="text"]',
+            'input[type="email"]',
+            'input[type="number"]',
+            'input[type="submit"]',
+            'input[type="image"]',
+            'label[for]',
+            'select',
+            'textarea',
+            'button',
+            '.link'
+          ]}
+        />
       </div>
     </section>
   );
