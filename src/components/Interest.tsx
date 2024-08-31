@@ -34,7 +34,7 @@ export default function Interest() {
                             return (
                                 <div className={`pt-12 px-6 md:px-8 int xl:px-10 ${idx == 1 ? 'bg-[#EDEBFE]' : 'bg-[#F3F3F3]'} rounded-3xl min-h-96 md:min-h-[420px]`} key={idx}>
 
-                                    <div className="h-[25%]">
+                                    <div className="h-32">
                                         <h4 className={`mb-6 ${idx == 1 ? 'text-primary' : 'text-black]'} max-w-xs`}>{items.title}</h4>
                                     </div>
                                     <p className="text-lg xl:text-xl max-w-[260px]">{items.deal}</p>
