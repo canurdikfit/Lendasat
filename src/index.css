@@ -9,6 +9,10 @@
   src: url("assets/fonts/GuavaCandy.ttf");
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-synthesis: none;
@@ -17,7 +21,6 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  scroll-behavior: smooth;
   background: #000;
   color: #fff;
 }
@@ -30,22 +33,26 @@ body {
   background: rgb(0, 0, 0);
   background: radial-gradient(
     circle,
-    rgba(0, 0, 0, 0.08) 0%,
-    rgba(0, 0, 0, 1) 90%
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 95%
   );
 }
 
 p {
   font-family: "DM Sans", sans-serif;
   font-weight: 500;
-  @apply text-sm md:text-base lg:text-lg;
+  @apply text-sm md:text-base lg:text-lg 2xl:text-2xl;
 }
 
-h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+div.word div.chars,
+div.word div.charsi,
+div.word div.char,
+div.word div.contaxt,
+div.word div.foot {
   font-family: "Guava Candy";
   background: #bfbfbf;
   color: transparent;
@@ -56,25 +63,29 @@ h5 {
 }
 
 @media screen and (max-width: 660px) {
-  h1,
   h2,
   h3,
   h4,
-  h5 {
+  h5,
+  div.word div.chars,
+  div.word div.charsi,
+  div.word div.char,
+  div.word div.contaxt,
+  div.word div.foot {
     text-shadow: 0.1px 2.2px 0 rgb(255, 255, 255);
   }
 }
 
 h1 {
-  @apply text-center text-3xl md:text-5xl xl:text-7xl;
+  @apply text-center text-2xl leading-7 md:text-4xl md:leading-10 lg:text-[3.43rem] lg:leading-[55px] 2xl:text-8xl;
 }
 
 h2 {
-  @apply text-center text-3xl md:text-5xl xl:text-7xl;
+  @apply text-center text-3xl md:text-5xl xl:text-7xl 2xl:text-8xl;
 }
 
 h3 {
-  @apply text-center text-2xl md:text-4xl xl:text-6xl;
+  @apply text-center text-2xl md:text-4xl xl:text-6xl 2xl:text-8xl;
 }
 
 .btnHov:hover {
@@ -82,9 +93,12 @@ h3 {
   transition: all 0.25s cubic-bezier(0.67, 2.94, 0.31, 0.5) !important;
 }
 
-.swiper-slide,
+.swiper-slide {
+  @apply lg:h-[400px] h-[350px] 2xl:h-[550px] !important;
+}
+
 .mySwiper {
-  @apply lg:w-[300px] w-[200px]  !important;
+  @apply lg:h-[450px] h-[400px] 2xl:h-[600px] w-fit !important;
 }
 
 .swiper-3d .swiper-slide-shadow {
@@ -103,8 +117,13 @@ div.word {
 div.word div.chars,
 div.word div.charsi,
 div.word div.char,
-div.word div.contaxt {
-  @apply inline-block mx-[0.5px];
+div.word div.contaxt,
+div.word div.foot {
+  @apply inline-block mx-[0.5px] 2xl:text-8xl;
+}
+
+div.word div.charsi {
+  @apply xl:text-[80px] 2xl:text-[130px] !important;
 }
 
 input:-webkit-autofill,
@@ -114,4 +133,8 @@ input:-webkit-autofill:active {
   -webkit-background-clip: text;
   -webkit-text-fill-color: #ffffff;
   transition: background-color 5000s ease-in-out 0s;
+}
+
+select::placeholder {
+  opacity: 25%;
 }

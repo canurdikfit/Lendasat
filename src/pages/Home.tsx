@@ -1,10 +1,13 @@
 import { useGSAP } from "@gsap/react";
-import Loading from "../components/Loading";
 import Navbar from "../components/Navbar";
-import Banner from "../components/Banner";
 import Welcome from "../components/Welcome";
 import Footer from "../components/Footer";
 import gsap from "gsap";
+import BackToTop from "../components/BackToTop";
+import DisplayBanner from "../components/DisplayBanner";
+import Cursor from "../components/Cursor";
+import About from "../components/About";
+import Discovery from "../components/Discovery";
 
 function Home() {
     useGSAP(() => {
@@ -17,12 +20,18 @@ function Home() {
 
     return (
         <main className="main w-screen overflow-hidden">
-            <Loading />
             <Navbar />
-            <Banner />
-            <Welcome />
+            <DisplayBanner />
+            <section className="overflow-visible" id="scroll" >
+                <Welcome />
+                <About />
+                <Discovery />
+            </section>
             <Footer />
+            <BackToTop />
+            <Cursor />
         </main>
+
     );
 }
 

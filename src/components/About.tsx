@@ -1,14 +1,15 @@
 import AboutBackground from "./../assets/imgs/Night City.webp";
-import Get_Now from "./../assets/imgs/buttons/get_now.png";
+import Get_Now from "./../assets/imgs/buttons/join_waitlist.png";
 import LightPool from "./../assets/imgs/light_pool.webp";
 import LayerScale from "./../assets/imgs/layerScale-2.png";
 import Aje from "./../assets/imgs/AjeCap.webp";
 import Light from "./../assets/imgs/light.png";
-import BlurredDrum from "./../assets/imgs/Drum.webp";
+import BlurredDrum from "./../assets/imgs/bgdrum.gif";
 import { gsap } from "gsap";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -85,6 +86,7 @@ export default function About() {
 
   return (
     <div className="relative overflow-visible min-h-[600px] xl:min-h-[1000px] flex items-center justify-center px-6 md:px-14 lg:px-20 pt-20 md:pt-0">
+      {/* Background and Shadow  */}
       <div className="absolute z-10 top-0 w-full bg-gradient-to-b from-black/85 to-black/0 h-[150px] md:h-[300px]" />
 
       <div className="absolute z-20 bg-black backdrop-blur h-full w-full opacity-55" />
@@ -94,10 +96,10 @@ export default function About() {
         alt="Banner Image"
         className="absolute h-full w-full object-cover object-center"
       />
-
-      <div className="relative grid md:grid-cols-2 items-center">
+      {/* Content  */}
+      <div className="relative grid md:grid-cols-2 items-center mx-auto 2xl:pb-10">
         <div className="flex flex-col gap-5 relative z-40 md:order-last">
-          <h2 className="text-left xl:text-[80px] js-words">
+          <h2 className="text-left js-words">
             <h2 className="text-left inline-block md:block"><div className="word">
               <div className="charsi">w</div>
               <div className="charsi">h</div>
@@ -123,23 +125,25 @@ export default function About() {
               </div>
             </h2>
           </h2>
-          <p className="max-w-md about_text opacity-35">
-            Lorem ipsum dolor sit amet consectetur. Pharetra nisl vel praesent
-            sit. Nisl lectus pharetra ut venenatis in gravida. Sagittis
-            pellentesque convallis quam scelerisque. Ut nisl adipiscing varius
-            sed fames. Sagittis blandit turpis sit tincidunt nulla tellus enim
-            sit. Consectetur egestas tortor fermentum blandit{" "}
+          <p className="max-w-md 2xl:max-w-2xl about_text opacity-35">
+            Culangex is an innovative language learning practical language application. Our mission is to platform that merges cultural immersion with
+            help users master new languages as if they were
+            learning in real-life contexts, seamlessly integrating
+            cultural elements to enhance both language skills
+            and cultural understanding
           </p>
-          <button
-            id="button"
-            className="bg-none outline-none border-none max-w-[130px] xl:max-w-[180px] shrink-0 btnHov"
-          >
-            <img
-              src={Get_Now}
-              alt="Join Waitlist"
-              className="h-auto w-full object-contain object-center"
-            />
-          </button>
+          <Link to={'/join_waitlist'}>
+            <button
+              id="button"
+              className="bg-none outline-none border-none max-w-[130px] xl:max-w-[180px] 2xl:max-w-[250px] shrink-0 btnHov"
+            >
+              <img
+                src={Get_Now}
+                alt="Join Waitlist"
+                className="h-auto w-full object-contain object-center"
+              />
+            </button>
+          </Link>
         </div>
         <div className="relative z-20 overflow-hidden">
           <img
@@ -155,26 +159,33 @@ export default function About() {
       <div className="absolute z-30 top-[83%] md:top-[60%] md:sw-full min-w-[1000px] left-0 h-auto">
         <img src={LayerScale} alt="Layer Blur" className="h-auto w-screen" />
       </div>
-      <div
-        id="pool"
-        className="absolute -right-[12%] translate-x-[500px] xl:top-10 top-0 z-20 h-full w-fit hidden lg:block"
-      >
-        <div className="relative xl:h-[1000px] md:h-[700px] ">
-          <img
-            src={LightPool}
-            alt="Light Pool"
-            className="h-full w-auto object-contain"
-          />
-          <img
-            src={Light}
-            alt="Light"
-            id="light"
-            className="xl:h-52 md:h-32 w-auto absolute top-[9%] -left-[3%] xl:-left-[5%] opacity-35"
-          />
+
+
+      <div className="max-w-[1800px] mx-auto absolute h-full w-full z-20">
+        <div
+          id="pool"
+          className="absolute -right-[12%] translate-x-[500px] xl:top-10 top-0  h-full w-fit hidden lg:block"
+        >
+          <div className="relative xl:h-[1000px] md:h-[700px] ">
+            <img
+              src={LightPool}
+              alt="Light Pool"
+              className="h-full w-auto object-contain"
+            />
+            <img
+              src={Light}
+              alt="Light"
+              id="light"
+              className="xl:h-52 md:h-32 w-auto absolute top-[9%] -left-[3%] xl:-left-[5%] opacity-35"
+            />
+          </div>
         </div>
+
       </div>
+
+      <div className="absolute z-20 -bottom-5 w-full bg-[#000000] blur-2xl h-[150px] md:h-[300px]" />
       <div className="absolute z-20 bottom-0 w-full bg-[#030F13] blur-2xl h-[150px] md:h-[300px]" />
-      <div className="absolute -left-[20%] xl:-left-[12%] -bottom-20 md:-bottom-40 lg:-bottom-[250px] z-30 h-[250px] md:h-[400px] xl:h-[500px]">
+      <div className="absolute -left-[16%] xl:-left-[8%] -bottom-20 md:-bottom-40 lg:-bottom-[250px] z-30 h-[250px] md:h-[400px] xl:h-[500px] 2xl:h-[650px] rotate-[33deg]">
         <img
           src={BlurredDrum}
           alt="Blurred"
