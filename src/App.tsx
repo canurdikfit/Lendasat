@@ -8,6 +8,7 @@ import NewsLetter from './components/NewsLetter';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import { ScrollRestoration } from 'react-router-dom';
+import Supporter from './components/Supporter';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Navbar />
       <Banner />
       <ImageDisplayer src={DesktopImage} />
+      <Supporter />
       <AppAdvert />
       <HowItWorks />
       <Team />

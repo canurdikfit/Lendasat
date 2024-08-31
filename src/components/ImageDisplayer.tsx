@@ -15,14 +15,14 @@ export default function ImageDisplayer(props: { src: string }) {
             scrollTrigger: {
                 trigger: ".desktop",
                 start: "top bottom",
-                end: "top 40%",
+                end: "top 30%",
                 scrub: true,
             },
             ease: "sine.inOut",
         })
     }, [])
     return (
-        <section className="desktop">
+        <section className="desktop pt-10">
             <img
                 src={props.src}
                 alt="Desktop image"

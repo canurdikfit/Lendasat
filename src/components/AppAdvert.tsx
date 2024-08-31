@@ -1,4 +1,5 @@
 import { GoArrowUpRight } from 'react-icons/go';
+import Triangle from './../assets/icons/traiangle.png';
 import MobileApp from './../assets/images/mobile_app.png';
 import { Link } from 'react-router-dom';
 import { gsap } from "gsap";
@@ -58,6 +59,7 @@ export default function AppAdvert() {
                                 className='grid items-center md:grid-cols-2 gap-10 md:gap-5'>
                                 <div className={`flex items-center ${idx == 1 && 'md:order-2'} justify-center h-full`}>
                                     <div>
+                                        <img src={Triangle} alt="Icon" className={`mb-8 ${idx == 0 ? 'event_one' : ''} ${idx == 2 ? 'event_two' : ''} ${idx == 1 ? 'event' : ''} h-12 w-auto`} />
                                         <span className={`bg-[#F3EDFD] ${idx == 0 ? 'event_one' : ''} ${idx == 2 ? 'event_two' : ''} ${idx == 1 ? 'event' : ''} inline-block px-4 py-1 md:text-base lg:text-xl rounded-full text-primary`}>{items.detail}</span>
                                         <h3 className={`max-w-sm ${idx == 1 ? 'event' : ''} ${idx == 2 ? 'event_two' : ''} ${idx == 0 ? 'lg:pt-12 lg:pb-16 py-10 event_one' : 'py-8 lg:py-12'} lg:text-[40px] md:text-3xl`}>
                                             {items.catchPhrase}

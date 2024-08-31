@@ -32,7 +32,7 @@ export const Banner = () => {
         window.onload = handleAfterLoading
     }, [])
     return (
-        <section className='pt-60'>
+        <section className='pt-48'>
             <div className="text-center">
                 <div className=" flex items-center justify-center gap-3">
                     <img className='h-10 w-auto icon' src={Bitcoin} alt="Icon" />
