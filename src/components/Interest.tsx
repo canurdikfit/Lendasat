@@ -1,6 +1,6 @@
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
-
+import Triangle from './../assets/icons/traiangle-2.png';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 
@@ -32,8 +32,8 @@ export default function Interest() {
                     {
                         InterestDeals.map((items, idx) => {
                             return (
-                                <div className={`pt-12 px-6 md:px-8 int xl:px-10 ${idx == 1 ? 'bg-[#EDEBFE]' : 'bg-[#F3F3F3]'} rounded-3xl min-h-96 md:min-h-[420px]`} key={idx}>
-
+                                <div className={`pt-12 px-6 md:px-8 int xl:px-10 ${idx == 1 ? 'bg-[#EDEBFE]' : 'bg-[#F3F3F3]'} rounded-3xl min-h-[400px] pb-10 md:min-h-[450px]`} key={idx}>
+                                    <img src={Triangle} alt="Icon" className={`mb-4 h-10 w-auto`} />
                                     <div className="h-32">
                                         <h4 className={`mb-6 ${idx == 1 ? 'text-primary' : 'text-black]'} max-w-xs`}>{items.title}</h4>
                                     </div>

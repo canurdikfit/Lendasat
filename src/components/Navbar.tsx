@@ -35,10 +35,6 @@ export default function Navbar() {
                                 {
                                     hash: 'Features',
                                     url: '/#features'
-                                },
-                                {
-                                    hash: 'FAQ',
-                                    url: ''
                                 }
                             ].map((items, idx) => {
                                 return (
