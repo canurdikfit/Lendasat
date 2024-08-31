@@ -1,140 +1,206 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @font-face {
-  font-family: "Guava Candy";
-  src: url("assets/fonts/GuavaCandy.ttf");
+  font-family: "Monument Medium";
+  src: url("assets/font/MonumentGrotesk-Medium.woff");
 }
 
-html {
+@font-face {
+  font-family: "Monument Regular";
+  src: url("assets/font/MonumentGrotesk-Regular.otf");
+}
+
+:root {
+  font-family: "Monument Regular";
+  color-scheme: light;
+  color: #000;
+  background-color: #fff;
   scroll-behavior: smooth;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-family: "Monument Medium";
+  @apply lg:text-6xl md:text-5xl text-4xl lg:leading-[1.2] text-center text-black;
+}
+
+h3 {
+  @apply md:text-5xl text-4xl;
+}
+
+h4 {
+  font-family: "Monument Medium";
+  @apply leading-[1.4] md:text-4xl text-3xl;
+}
+
+h5 {
+  font-family: "Monument Medium";
+  @apply md:text-2xl text-lg;
+}
+
+p {
+  @apply text-secondary;
+}
+
+section {
+  @apply px-5 md:px-14 lg:px-20 xl:px-28 max-w-screen-2xl mx-auto flex items-center justify-center py-12;
 }
 
 body {
   margin: 0;
-  font-synthesis: none;
-  font-optical-sizing: auto;
-  font-family: "Guava Candy";
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: #000;
-  color: #fff;
 }
 
-.main {
-  visibility: hidden;
+.gradient_bg {
+  overflow: hidden;
+  background: linear-gradient(
+    312deg,
+    rgba(255, 255, 255, 1) 47%,
+    rgba(246, 232, 239, 1) 100%
+  );
+  background-size: 300% 300%;
+  -webkit-animation: rainbow 25s ease infinite;
+  -z-animation: rainbow 25s ease infinite;
+  -o-animation: rainbow 25s ease infinite;
+  animation: rainbow 10s ease infinite;
+}
+.gradient_bg_one {
+  overflow: hidden;
+  background: linear-gradient(
+    312deg,
+    rgba(255, 255, 255, 1) 55%,
+    rgba(222, 219, 246, 1) 100%
+  );
+  background-size: 300% 300%;
+  -webkit-animation: rainbow 25s ease infinite;
+  -z-animation: rainbow 25s ease infinite;
+  -o-animation: rainbow 25s ease infinite;
+  animation: rainbow 10s ease infinite;
 }
 
-.gradient_overlay {
-  background: rgb(0, 0, 0);
-  background: radial-gradient(
-    circle,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 1) 95%
+.how_it_works {
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(240, 238, 254, 1) 0%,
+    rgba(255, 246, 250, 0.9822522759103641) 100%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(240, 238, 254, 1) 0%,
+    rgba(255, 246, 250, 0.9822522759103641) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(240, 238, 254, 1) 0%,
+    rgba(255, 246, 250, 0.9822522759103641) 100%
   );
 }
 
-p {
-  font-family: "DM Sans", sans-serif;
-  font-weight: 500;
-  @apply text-sm md:text-base lg:text-lg 2xl:text-2xl;
+.desktop {
+  transform-style: preserve-3d;
+  transform: rotateX(60deg) translateZ(0.5em);
 }
 
-h2,
-h3,
-h4,
-h5,
-div.word div.chars,
-div.word div.charsi,
-div.word div.char,
-div.word div.contaxt,
-div.word div.foot {
-  font-family: "Guava Candy";
-  background: #bfbfbf;
-  color: transparent;
-  text-shadow: 0.3px 3px 0 rgb(255, 255, 255);
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
+a:hover .arrow_movement {
+  animation: arrow 1.2s infinite;
 }
 
-@media screen and (max-width: 660px) {
-  h2,
-  h3,
-  h4,
-  h5,
-  div.word div.chars,
-  div.word div.charsi,
-  div.word div.char,
-  div.word div.contaxt,
-  div.word div.foot {
-    text-shadow: 0.1px 2.2px 0 rgb(255, 255, 255);
+footer a {
+  @apply hover:text-black hover:scale-110 transition-transform ease-linear duration-200;
+}
+
+@-webkit-keyframes rainbow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes rainbow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-o-keyframes rainbow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes rainbow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
-h1 {
-  @apply text-center text-2xl leading-7 md:text-4xl md:leading-10 lg:text-[3.43rem] lg:leading-[55px] 2xl:text-8xl;
+@keyframes arrow {
+  from {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(12px);
+  }
 }
 
-h2 {
-  @apply text-center text-3xl md:text-5xl xl:text-7xl 2xl:text-8xl;
+@-webkit-keyframes arrow {
+  from {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translateX(12px);
+  }
 }
 
-h3 {
-  @apply text-center text-2xl md:text-4xl xl:text-6xl 2xl:text-8xl;
+@-moz-keyframes arrow {
+  from {
+    opacity: 1;
+    -moz-transform: translateX(0);
+  }
+
+  to {
+    opacity: 0;
+    -moz-transform: translateX(12px);
+  }
 }
 
-.btnHov:hover {
-  transform: scale(1.08) rotate(6deg) !important;
-  transition: all 0.25s cubic-bezier(0.67, 2.94, 0.31, 0.5) !important;
-}
+@-o-keyframes arrow {
+  from {
+    opacity: 1;
+    -o-transform: translateX(0);
+  }
 
-.swiper-slide {
-  @apply lg:h-[400px] h-[350px] 2xl:h-[550px] !important;
-}
-
-.mySwiper {
-  @apply lg:h-[450px] h-[400px] 2xl:h-[600px] w-fit !important;
-}
-
-.swiper-3d .swiper-slide-shadow {
-  background: none !important;
-}
-
-input,
-textarea {
-  font-family: "Guava Candy";
-}
-
-div.word {
-  @apply inline-block mx-1.5;
-}
-
-div.word div.chars,
-div.word div.charsi,
-div.word div.char,
-div.word div.contaxt,
-div.word div.foot {
-  @apply inline-block mx-[0.5px] 2xl:text-8xl;
-}
-
-div.word div.charsi {
-  @apply xl:text-[80px] 2xl:text-[130px] !important;
-}
-
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: #ffffff;
-  transition: background-color 5000s ease-in-out 0s;
-}
-
-select::placeholder {
-  opacity: 25%;
+  to {
+    opacity: 0;
+    -o-transform: translateX(12px);
+  }
 }

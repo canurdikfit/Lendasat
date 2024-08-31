@@ -1,27 +1,29 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./pages/Home";
-import Congratulations from "./pages/Congratulations";
-import Waitlist from "./pages/Waitlist";
+import { Banner } from './components/Banner'
+import ImageDisplayer from './components/ImageDisplayer'
+import DesktopImage from './assets/images/desktop_chart.png';
+import AppAdvert from './components/AppAdvert';
+import HowItWorks from './components/HowItWorks';
+import Team from './components/Team';
+import NewsLetter from './components/NewsLetter';
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
+import { ScrollRestoration } from 'react-router-dom';
 
-export default function App() {
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Home />,
-    },
-    {
-      path: "/join_waitlist",
-      element: <Waitlist />,
-    },
-    {
-      path: "/suscribed",
-      element: <Congratulations />,
-    }
-  ]);
+
+function App() {
   return (
-
-    <RouterProvider router={router} />
-
-
+    <>
+      <Navbar />
+      <Banner />
+      <ImageDisplayer src={DesktopImage} />
+      <AppAdvert />
+      <HowItWorks />
+      <Team />
+      <NewsLetter />
+      <Footer />
+      <ScrollRestoration />
+    </>
   )
 }
+
+export default App
