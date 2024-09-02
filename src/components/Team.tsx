@@ -1,5 +1,7 @@
 import { FaXTwitter } from 'react-icons/fa6';
-import TeamMember from './../assets/images/team.png';
+import TeamMember from './../assets/images/lucas.png';
+import TeamMember1 from './../assets/images/phillip.png';
+import TeamMember2 from './../assets/images/richie.png';
 import { Link } from 'react-router-dom';
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -30,7 +32,7 @@ export default function Team() {
             <div className="w-full max-w-6xl">
                 <h3 className='pt-10 mb-16 text-center'>Meet the team</h3>
 
-                <div className="grid lg:grid-cols-3 md:grid-cols-2 md:gap-5 gap-10">
+                <div className="grid lg:grid-cols-3 md:grid-cols-2 md:gap-5 gap-10 items-end">
                     <div className="bg-[#ECE4FC] members w-full px-12 pt-8 pb-11 xl:min-h-[450px] min-h-[400px] flex flex-col justify-between rounded-3xl">
                         <div>
                             <h4 className='mb-7 xl:text-4xl text-3xl'>Our Fantastic <br />Team</h4>
@@ -46,7 +48,8 @@ export default function Team() {
                             return (
                                 <div key={index}>
                                     <div className="members w-fit max-w-sm mx-auto">
-                                        <img src={items.src} alt="Team Member" className='h-full w-full max-w-sm object-contain object-top' />
+
+                                        <img src={items.src} alt="Team Member" className='h-full w-full max-w-sm object-conver object-bottom' />
                                         <div className="pl-5 space-y-2">
                                             <div className=" flex items-baseline justify-between">
                                                 <h5>{items.title}</h5>
@@ -75,13 +78,13 @@ const TeamList = [
         twitterHash: 'https://www.x.com/@10101_lucas'
     },
     {
-        src: TeamMember,
+        src: TeamMember1,
         title: 'Philipp',
         position: 'CEO, Founder',
         twitterHash: 'https://www.x.com/@bonomat'
     },
     {
-        src: TeamMember,
+        src: TeamMember2,
         title: 'Richie',
         position: 'CEO, Founders',
         twitterHash: 'https://www.x.com/@richardholzeis'
