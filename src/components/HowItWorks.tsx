@@ -24,7 +24,7 @@ export default function HowItWorks() {
     }, [])
 
     return (
-        <section id='how_it_works'>
+        <section>
             <div className="max-w-6xl">
                 <h3 className='pt-10 mb-10 text-center slope'>How it Works</h3>
 

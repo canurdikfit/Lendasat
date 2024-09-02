@@ -26,7 +26,7 @@ export default function Navbar() {
                             [
                                 {
                                     hash: 'Borrowing',
-                                    url: '/#how_it_works'
+                                    url: '/'
                                 },
                                 {
                                     hash: 'For Lenders',
@@ -39,7 +39,13 @@ export default function Navbar() {
                             ].map((items, idx) => {
                                 return (
                                     <li key={idx} onClick={() => setOpen(false)} className='text-3xl md:text-base'>
-                                        <NavLink className='inline-block active:text-primary hover:text-primary transition-all ease-in-out duration-300' to={items.url}>{items.hash}</NavLink>
+                                        {
+                                            items.hash == 'Features' ? (
+                                                <Link className='inline-block active:text-primary hover:text-primary transition-all ease-in-out duration-300' to={items.url}>{items.hash}</Link>
+                                            ) : (
+                                                <NavLink className='inline-block active:text-primary hover:text-primary transition-all ease-in-out duration-300' to={items.url}>{items.hash}</NavLink>
+                                            )
+                                        }
                                     </li>
                                 )
                             })

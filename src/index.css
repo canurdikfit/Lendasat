@@ -55,6 +55,10 @@ body {
   margin: 0;
 }
 
+nav a.active {
+  @apply text-primary;
+}
+
 .gradient_bg {
   overflow: hidden;
   background: linear-gradient(
