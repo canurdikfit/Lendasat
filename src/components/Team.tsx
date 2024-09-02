@@ -72,18 +72,18 @@ const TeamList = [
         src: TeamMember,
         title: 'Lucas',
         position: 'CEO, Founders',
-        twitterHash: ''
+        twitterHash: 'https://www.x.com/@10101_lucas'
     },
     {
         src: TeamMember,
         title: 'Philipp',
         position: 'CEO, Founder',
-        twitterHash: ''
+        twitterHash: 'https://www.x.com/@bonomat'
     },
     {
         src: TeamMember,
         title: 'Richie',
         position: 'CEO, Founders',
-        twitterHash: ''
+        twitterHash: 'https://www.x.com/@richardholzeis'
     },
 ]
