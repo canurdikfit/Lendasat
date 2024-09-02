@@ -27,8 +27,7 @@ export default function Payouts() {
     return (
         <section>
             <div
-
-                className='grid items-center md:grid-cols-2 gap-10 md:gap-5 w-full'>
+                className='grid items-center md:grid-cols-2 gap-10 md:gap-5 w-full max-w-6xl'>
                 <div className='how_it_works pay rounded-3xl xl:rounded-[50px] overflow-hidden w-full pt-12 px-10 flex items-center justify-center'>
                     <img src={Payout} alt="Mobile App" className='h-full w-full max-w-sm object-contain object-bottom' />
                 </div>

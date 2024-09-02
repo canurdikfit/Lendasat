@@ -26,7 +26,7 @@ export default function Navbar() {
                             [
                                 {
                                     hash: 'Borrowing',
-                                    url: '#how_it_works'
+                                    url: '/#how_it_works'
                                 },
                                 {
                                     hash: 'For Lenders',

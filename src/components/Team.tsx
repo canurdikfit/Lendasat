@@ -27,7 +27,7 @@ export default function Team() {
 
     return (
         <section>
-            <div className="w-full">
+            <div className="w-full max-w-6xl">
                 <h3 className='pt-10 mb-16 text-center'>Meet the team</h3>
 
                 <div className="grid lg:grid-cols-3 md:grid-cols-2 md:gap-5 gap-10">
